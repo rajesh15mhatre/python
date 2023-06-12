@@ -12,3 +12,7 @@ then run bat file to setup github, post setup clone your repo
 in order to post your chnages add below config
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
+
+## run as module
+Create __init__.py file in each folder to run pipeline as a module
+
