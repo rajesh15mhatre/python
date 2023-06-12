@@ -15,6 +15,6 @@ git config --global user.email "you@example.com"
 
 git config --global user.name "Your Name"
 
-## run as module
+## Run as module
 - Create __init__.py file in each folder to run pipeline as a module
 - Make sure you have updated your launch.json file and select default python ineterpreter in setting -> search select python -> select desired python setup
