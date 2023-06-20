@@ -6,7 +6,7 @@
 - store generated keys in .shh diretory 
 - add public key in you git hosting service provider like github
 
-then run bat file to setup github, post setup clone your repo
+then run bat file stored in `scripts/setup_github_keys.bat` to setup github, post setup c`lone your repo
 
 ## Git config
 in order to post your chanages to github add below config:
