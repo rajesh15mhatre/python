@@ -6,7 +6,7 @@ DATA = Path.home() / "data"
 def search_google_news(keyword):
     news_list = []
     base_url = 'https://news.google.com'
-    search_url = f'{base_url}/search?q={keyword}&hl=en-US&gl=US&ceid=US%3Aen'
+    search_url = f'{base_url}/search?q="{keyword}"when:1h&hl=en-US&gl=US&ceid=US%3Aen'
     # Fetching the search results page
     response = requests.get(search_url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -26,28 +26,12 @@ def search_google_news(keyword):
             'link': link,
             'source': source,
             'timestamp': timestamp,
-            #'description': description
         })
+    return news_list
 
-    # Checking if there is a next page
-    next_page = soup.find('a', class_='lBwEZb BL5WZb G0iuSb')['href'] if soup.find('a', class_='lBwEZb BL5WZb G0iuSb') else None
-
-    return news_list, next_page
-
-def retrieve_news_pages(keyword, num_pages=2):
-    all_news = []
-    next_page = None
-
-    # Looping through the desired number of pages
-    for _ in range(num_pages):
-        news, next_page = search_google_news(keyword)
-        all_news.extend(news)
-
-        # Breaking the loop if there are no more pages
-        if not next_page:
-            break
-
-    return all_news
+def retrieve_news_pages(keyword):
+    news = search_google_news(keyword)
+    return news
 
 def get_project_root():
     current_dir = Path.cwd()
@@ -75,7 +59,7 @@ def main():
                 print(f'Link: {news["link"]}')
                 print(f'Source: {news["source"]}')
                 print(f'Timestamp: {news["timestamp"]}')
-                print(f'Description: {news["description"]}')
+                # print(f'Description: {news["description"]}')
                 print('---')
      
 
