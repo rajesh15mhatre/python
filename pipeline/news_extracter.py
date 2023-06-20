@@ -1,3 +1,11 @@
+"""
+This python script ferch gooogle news search result for provided keyword
+activate environment before running script to use proper env and run as a module
+
+$ python -m pipeline.news_extracter
+
+"""
+
 import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
