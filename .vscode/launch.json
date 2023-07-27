@@ -14,7 +14,7 @@
             "type": "python",
             "request": "launch",
            // "program": "${file}",
-            "module": "pipeline.news_extracter",
+            "module": "pipeline.google_news.news_extracter",
            // "console": "integratedTerminal",
            // "justMyCode": true
            "args": [
