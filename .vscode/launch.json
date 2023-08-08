@@ -4,7 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
    "env":{
     //"ENVIRONMENT":"staging",
-    "PYTHONPATH": "D:\\Rajesh\\projects\\python\\.venv"
+    "PYTHONPATH": "C:\\Users\\rajeshmh\\.virtualenvs\\python-Rj8UEsPS\\Scripts\\python.exe"
 
     },
     "version": "0.2.0",
@@ -14,12 +14,15 @@
             "type": "python",
             "request": "launch",
            // "program": "${file}",
-            "module": "pipeline.google_news.news_extracter",
+            "module": "pipeline.google_news.selenium_n_request",
            // "console": "integratedTerminal",
            // "justMyCode": true
            "args": [
             //"--test"
-           ]
+           ],
+           "env": {
+            "PYTHONPATH": "C:\\Users\\rajeshmh\\.virtualenvs\\python-Rj8UEsPS\\Scripts\\python.exe"
+        },
 
         }
     ]

@@ -2,7 +2,7 @@
 This python script search provided keywords in provided list of wenbsits recursilvley or single sreach based on parameter 
 activate environment before running script to use proper env and run as a module
 
-Usage: python -m pipeline.domain_search.domain_search 
+Usage: python -m pipeline.domain_search.domain_search
 
 """
 
@@ -26,7 +26,7 @@ def crawl_website(url, keyword_list, base_url, visited_urls=None, csv_writer=Non
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
         }
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, verify=False, timeout=20)
         visited_urls.add(url)
 
         if response.status_code == 200:
@@ -38,10 +38,10 @@ def crawl_website(url, keyword_list, base_url, visited_urls=None, csv_writer=Non
                 if re.search(pattern, response.text):
                     print(f"Keyword '{keyword}' found on page: {url}")
                     if csv_writer:
-                        csv_writer.writerow([url, keyword, "Found", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+                        csv_writer.writerow([response.url, keyword, "Found", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
                 else:
                     if csv_writer:
-                        csv_writer.writerow([url, keyword, "Not Found", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
+                        csv_writer.writerow([response.url, keyword, "Not Found", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
 
             # Find all the internal links on the page
             internal_links = re.findall(r'href=[\'"]?([^\'" >]+)', response.text)

@@ -9,6 +9,10 @@ bs4 = "*"
 pathlib = "*"
 docopt = "*"
 pyyaml="*"
+gnewsclient = "*"
+python-levenshtein = "*"
+selenium = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 

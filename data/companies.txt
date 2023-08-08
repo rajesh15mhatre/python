@@ -1,6 +1,3 @@
 samsung
 oracle
-
-USer input for timeframe and keywords specific to M&A 
-output excel future email alret 
-API ruters for M&A news 
+Apple

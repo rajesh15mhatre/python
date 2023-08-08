@@ -1,5 +1,4 @@
 acquired
-
 combined
 merged
 acquires
