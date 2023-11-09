@@ -1,11 +1,14 @@
 # Regression Testing
-## Performing similaer test multiple times and monitor it using trend of last five run running avg with actual run 
-- Test website using below tool with different connection 3g/4g
+## Performing similar tests multiple times and monitoring them using the trend of the last five-run running average with the actual run 
+- Test the website using the below tool with different connections 3g/4g
   - https://www.webpagetest.org/
-- LogParser.exe a command line utility tool from windows
-  - Helps to query logfiles
+- LogParser.exe is a command line utility tool from Windows
+  - Helps to query log files
 - Performance testing tool-Jmeter
-  - Download pluggins and copy jar file to lib folder: like Cutome Threada Groups
-- To analyse website ppeerfomance - Google page speed chrome extension
+  - Download plugins and copy the jar file of the extension to the lib/ext folder of jMeter installation: 
+    - Custom Thread Groups
+    - 3 Basic Graphs
+    -  5 additional graphs
+- To analyze website performance - Google page speed Chrome extension
 - Network interceptor tools - Fiddler, Chrome dev tools
-- opensource API testing tool - SoupUI, Gatling , locust (python)
+- opensource API testing tool - SoupUI, Gatling, locust (python)
