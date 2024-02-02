@@ -27,8 +27,8 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 driver.get("https://www.annaservice.com/isinlookup/login")
 time.sleep(2)  # Let the results load
 
-driver.find_element(By.XPATH,'//*[@id="username"]').send_keys('anubhav.mittal1@crisil.com')
-driver.find_element(By.XPATH,'//*[@id="password"]').send_keys('Anna@1243')
+driver.find_element(By.XPATH,'//*[@id="username"]').send_keys('email')
+driver.find_element(By.XPATH,'//*[@id="password"]').send_keys('pass')
 driver.find_element(By.XPATH,'/html/body/main/section/form/font/font/input[3]').click()
 time.sleep(5)
 filename = str( get_git_directory() / "data" / "isin.txt") 
